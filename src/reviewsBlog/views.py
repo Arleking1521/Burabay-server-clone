@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from .forms import ReviewForm, AnswerForm
 from .models import Reviews, Answer
+from django.core.mail import send_mail
 # Create your views here.
 def review_list(request):
     reviews = Reviews.objects.all()
@@ -16,6 +17,19 @@ def add_review(request):
         form = ReviewForm(request.POST)
         if form.is_valid():
             form.save()
+
+            author = form.cleaned_data['author']
+            iin = form.cleaned_data['IIN']
+            message = form.cleaned_data['review']
+
+            # Отправка письма на почту компании
+            subject = f"Новый отзыв от {author}"
+            body = f"Автор: {author}\nИИН: {iin}\nОтзыв: {message}"
+            from_email = 'karimknewit@gmail.com'
+            recipient_list = ['abdukarim600@gmail.com',]  # Список получателей
+
+            send_mail(subject, body, from_email, recipient_list, fail_silently=False)
+
             return redirect('reviews')  
     return render(request, 'reviewsPages/add_review.html', {'form': form})
 

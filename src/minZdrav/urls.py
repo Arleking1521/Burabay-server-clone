@@ -49,7 +49,9 @@ urlpatterns += i18n_patterns(
     path('scientific-developments/', TemplateView.as_view(template_name='dopPages/scientificDev.html'), name='sci-dev'),
     path('plans/', TemplateView.as_view(template_name='dopPages/plans.html'), name='plans'),
     path('quality-management-standard/', TemplateView.as_view(template_name='dopPages/managment_standart.html'), name='managment_standart'),
-    path('scientific-developments/', TemplateView.as_view(template_name='dopPages/gobmp.html'), name='sci-dev'),
+    path('strategic-development/', TemplateView.as_view(template_name='dopPages/strategic_development.html'), name='srategic-dev'),
+    path('quality-managment-standart/', TemplateView.as_view(template_name='dopPages/quality_managment.html'), name='QMStand'),
+    
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
