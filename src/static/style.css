@@ -26,8 +26,8 @@
     --swiper-pagination-bullet-vertical-gap: 6px;
     --swiper-navigation-size: 10px;
     --swiper-navigation-top-offset: 50%;
-    --swiper-navigation-sides-offset: 10px;
-    --swiper-navigation-color: transparent;
+    --swiper-navigation-sides-offset: 0px;
+    --swiper-navigation-color: rgba(0,0,0, 0.1);
     --swiper-navigation-size:10px;
 }
 
@@ -41,7 +41,7 @@ a:hover{
 }
 
 .sw1{
-    width: 33%;
+    width: calc(30% + 16px);
 }
 
 .swiper-button-next:after, .swiper-button-prev:after{
@@ -78,8 +78,10 @@ body{
 header{
     position: fixed;
     padding: 10px 10% 10px 10%;
-    display: grid;
-    grid-template-columns: 47% auto 47%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid lightgray;
     background-color: white;
     width: 80%;
@@ -168,13 +170,26 @@ li{
     color: white;
 }
 
+.logo-desk{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 80px;
+}
+
 .logo{
     display: flex;
     align-items: center;
     justify-content:center;
+    display: none;
 }
 
 .logo img{
+    width: 100%;
+    display: block;
+}
+
+.logo-desk img{
     width: 100%;
     display: block;
 }
@@ -1161,6 +1176,14 @@ width: 30%;
         display: none;
     }
 
+    .logo{
+        display: block;
+    }
+
+    .logo-desk{
+        display: none;
+    }
+
     .site-map-button{
         display: flex;
         align-items: center;
@@ -1182,7 +1205,8 @@ width: 30%;
     }
 
     header{
-        grid-template-columns: 46% auto 46%;
+        display: grid;
+        grid-template-columns: calc(50% - 33px) 66px calc(50% - 33px);
     } 
     .form-card{
         width: 50%;
@@ -1284,9 +1308,7 @@ width: 30%;
     .ceo-info .photo{
         width: 70%;
     }
-    header{
-        grid-template-columns: 45% auto 45%;
-    }
+
     .form-card{
         width: 60%;
     }
@@ -1295,9 +1317,6 @@ width: 30%;
     }
     .registration-btn-header{
         display: none;
-    }
-    header{
-        grid-template-columns: 45% auto 45%;
     }
     .lang-mobile{
         display: block;
@@ -1443,9 +1462,6 @@ width: 30%;
     .soc-links img{
         width: 10%;
     }
-    header{
-        grid-template-columns: 42% auto 42%;
-    }
     .Title{
         font-size: 30px;
     }
@@ -1464,12 +1480,6 @@ width: 30%;
     }
     .ceo-info span h2{
         font-size: 20px;
-    }
-  }
-
-  @media screen and (min-width:1440px){
-    header{
-        grid-template-columns: 48% auto 48%;
     }
   }
   
