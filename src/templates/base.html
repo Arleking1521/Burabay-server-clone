@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BurabayMZRK</title>
     <link rel="stylesheet" href="{%static 'style.css'%}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
@@ -22,7 +22,7 @@
             </div>
             <div class="menu">
                 <a href="{% url 'index' %}">{% trans 'Главная' %}</a>
-                <a href="{% url 'news' %}">{% trans 'Структура' %}</a>
+                <a href="{% url 'orgStruct' %}">{% trans 'Структура' %}</a>
                 <div class="dropmenu">
                     <a href="{% url 'med-services'%}" class="dropbtn">Администрация<span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
                     <div class="dropcontent">
@@ -31,18 +31,18 @@
                     </div>
                 </div>
                 <div class="dropmenu">
-                    <a href="{% url 'viewSovet'%}" class="dropbtn">Об институте<span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
-                    <div class="dropcontent">
+                    <a href="{% url 'srategic-dev'%}" class="dropbtn">Об институте<span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
+                    <div class="dropcontent">                        
+                        <a href="{% url 'srategic-dev'%}">{% trans 'Стратегическое развитие' %}</a>
                         <a href="{% url 'antiCor'%}">{% trans 'Противодействие коррупции' %}</a>
-                        <a href="{% url 'antiCor'%}">{% trans 'Государственные закупки' %}</a>
-                        <a href="{% url 'viewSovet'%}">{% trans 'Стандарт менеджемента' %}</a>
-                        <a href="{% url 'histories'%}">{% trans 'Стратегическое развитие' %}</a>
+                        <a href="{% url 'ads'%}">{% trans 'Государственные закупки' %}</a>
+                        <a href="{% url 'managment_standart'%}">{% trans 'Стандарт менеджемента' %}</a>
                         <a href="{% url 'viewSovet'%}">{% trans 'Наблюдательный совет' %}</a>
                     </div>
                 </div><div class="dropmenu">
                     <a href="{% url 'viewSovet'%}" class="dropbtn">Руководитель<span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
                     <div class="dropcontent">
-                        <a href="{% url 'viewSovet'%}">{% trans 'Блог Руководителя' %}</a>
+                        <a href="{% url 'ceo-info'%}">{% trans 'Блог Руководителя' %}</a>
                         <a href="{% url 'histories'%}">{% trans 'Для Обращений' %}</a>
                     </div>
                 </div>
@@ -86,23 +86,23 @@
                 <div class="dropmenu">
                     <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Пациентам</a>
                     <div class="dropcontent">
-                        <a href="{% url 'viewSovet'%}">Механизм получения путевки по ГОМБП</a>
-                        <a href="{% url 'histories'%}">Платные услуги</a>
-                        <a href="{% url 'ceo-info' %}">Правила санатория</a>
-                        <a href="{% url 'vacancies'%}">Прайс</a>
+                        <a href="{% url 'gobmp'%}">Механизм получения путевки по ГОМБП</a>
+                        <a href="{% url 'med-services'%}">Платные услуги</a>
+                        <a href="{% url 'rules' %}">Правила санатория</a>
+                        <a href="{% url 'med-services'%}">Прайс</a>
                     </div>
                 </div>
                 <div class="dropmenu">
                     <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Наука и Достижения</a>
                     <div class="dropcontent">
-                        <a href="{% url 'viewSovet'%}">Научные разработки</a>
-                        <a href="{% url 'histories'%}">Планы</a>
+                        <a href="{% url 'sci-dev'%}">Научные разработки</a>
+                        <a href="{% url 'plans'%}">Планы</a>
                     </div>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Медицинские услуги</a>
+                    <a class="rubric" href="{% url 'med-services'%}" class="dropbtn">Медицинские услуги</a>
                     <div class="dropcontent">
-                        <a href="{% url 'viewSovet'%}">Виды медицинских услуг</a>
+                        <a href="{% url 'med-services'%}">Виды медицинских услуг</a>
                         <a href="{% url 'histories'%}">Достижения</a>
                     </div>
                 </div>
