@@ -368,12 +368,12 @@ li{
     background-size: 100%;
     background-position: top;
     background-repeat: no-repeat;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 172px);
 }
 .back-img{
     display: flex;
     width: 80%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 172px);
     backdrop-filter: brightness(0.6);
     justify-content: center;
     flex-direction: column;
