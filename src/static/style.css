@@ -31,6 +31,10 @@
     --swiper-navigation-size:10px;
 }
 
+button{
+    font-weight: normal;
+}
+
 a{
     color: var(--bl);
     transition: 0.3s;
@@ -75,18 +79,67 @@ body{
     font-family: "Nunito Sans", sans-serif;
     margin: 0;
 }
+
 header{
     position: fixed;
+    width: 100%;
+    z-index: 2;
+    
+}
+
+.main-header{
+    position: relative;
     padding: 10px 10% 10px 10%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid lightgray;
     background-color: white;
     width: 80%;
-    z-index: 2;
     height: 80px;
+    z-index: 3;
+    border-bottom: 1px solid lightgray;
+}
+.sub-header{
+    background: var(--logo-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    z-index: 2;
+    max-height: 72px;
+}
+
+/* header:hover .sub-header{
+    transform: translateY(100px);
+} */
+.sub-menu{
+    background-color: transparent;
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); */
+    z-index: 5;
+    border-radius: 8px;
+}
+
+.rubric{
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.rubric:hover{
+    color: lightgray;
 }
 
 li{
@@ -116,7 +169,7 @@ li{
     padding: 10px 20px;
     color: whitesmoke;
     border-radius: 8px;
-    background: linear-gradient(45deg, var(--main-color1), var(--main-color2));
+    background: var(--logo-color);
     transition: 0.3s;
     border: none;
 }
@@ -175,6 +228,7 @@ li{
     align-items: center;
     justify-content:center;
     width: 80px;
+    margin-right: 20px;
 }
 
 .logo{
@@ -212,12 +266,35 @@ li{
     display: inline-block;
 }
 
+.sub-header .dropmenu{
+    padding: 10px 15px;
+    display: flex;
+}
+
+.sub-header .dropmenu:first-child{
+    padding: 10px 15px 10px 0px;
+}
+
+.sub-header .dropmenu:last-child{
+    padding: 10px 0px 10px 15px;
+}
+
+.sub-menu .dropmenu .dropcontent {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+    top: 50px;
+}
+
 .dropcontent {
     display: none;
     position: absolute;
     background-color: white;
-    width: 105%;
-    z-index: 1;
+    width: 145%;
+    z-index: 4;
     border-radius: 10px;
     box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
 }
@@ -915,7 +992,7 @@ width: 30%;
   }
 
   .content{
-    padding-top: 100px;
+    padding-top: 172px;
     min-height: calc(100vh - 245px);
   }
 
@@ -1170,6 +1247,20 @@ width: 30%;
     display: none;
   }
 
+  @media screen and (max-width:1440px){
+    .main-header{
+        padding: 10px 5%;
+        width: 90%;
+    }
+    .sub-menu{
+        width: 90%;
+    }
+    footer{
+        width: 90%;
+        padding: 30px 5%;
+    }
+  }
+
 
   @media screen and (max-width:1300px){
     .menu{
@@ -1204,7 +1295,16 @@ width: 30%;
         justify-content: center;
     }
 
-    header{
+    .sub-header{
+        display: none;
+        min-height: auto;
+    }
+
+    .content{
+        padding-top: 100px;
+    }
+
+    .main-header{
         display: grid;
         grid-template-columns: calc(50% - 33px) 66px calc(50% - 33px);
     } 
@@ -1228,7 +1328,7 @@ width: 30%;
     .map-button{
         width: 25%;
     }
-    header{
+    .main-header{
         padding: 10px 5%;
         width: 90%;
     }
@@ -1331,7 +1431,7 @@ width: 30%;
       }
     
     .lang-mobile button{
-        background: linear-gradient(45deg, var(--main-color1), var(--main-color2));
+        background: var(--logo-color);
         color: white;
         width: 30px;
         height: 30px;
