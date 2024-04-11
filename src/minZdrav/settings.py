@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'aboutPage',
     'reviewsBlog',
     'advertisement',
-    'appeals'
+    'appeal'
 ]
 
 MIDDLEWARE = [

@@ -9,20 +9,21 @@ def user_feedback(request):
             form.save()
 
             # Получение данных из формы
-            author = form.cleaned_data['author']
+            author = form.cleaned_data['name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
 
             # Создание объекта EmailMessage
-            subject = 'Новый отзыв от пользователя'
+            subject = 'Новое обращение от пользователя'
             body = f'Автор: {author}\nEmail: {email}\nОбращение: {message}'
             from_email = 'karimknewit@gmail.com'  # Отправитель по умолчанию
-            recipient_list = ['abdukarim600@gmail.com']  # Список получателей
+            recipient_list = ['abdukarim600@gmail.com',]  # Список получателей
 
             email = EmailMessage(subject, body, from_email, recipient_list)
             email.send()
 
             return render(request, 'feedback/thank_you.html')
-
+    else: 
+        form = UserFeedbackForm() 
     return render(request, 'feedback/user_feedback_form.html', {'form': form})
 

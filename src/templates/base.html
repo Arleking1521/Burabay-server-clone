@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BurabayMZRK</title>
+    <title>Document</title>
     <link rel="stylesheet" href="{%static 'style.css'%}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
@@ -43,7 +43,7 @@
                     <a href="{% url 'viewSovet'%}" class="dropbtn">Руководитель<span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
                     <div class="dropcontent">
                         <a href="{% url 'ceo-info'%}">{% trans 'Блог Руководителя' %}</a>
-                        <a href="{% url 'histories'%}">{% trans 'Для Обращений' %}</a>
+                        <a href="{% url 'appeal'%}">{% trans 'Для Обращений' %}</a>
                     </div>
                 </div>
                 <a href="{% url 'about'%}">История</a>
@@ -126,7 +126,7 @@
                     <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Пресс-центр</a>
                     <div class="dropcontent">
                         <a href="{% url 'viewSovet'%}">Медиагалерея</a>
-                        <a href="{% url 'news'%}">Новости</a>
+                        <a href="{% url 'histories'%}">Новости</a>
                     </div>
                 </div>
                 <div class="dropmenu">
@@ -135,7 +135,7 @@
                 <div class="dropmenu">
                     <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Кадровая политика</a>
                     <div class="dropcontent">
-                        <a href="{% url 'vacancies'%}">Вакансии</a>
+                        <a href="{% url 'viewSovet'%}">Вакансии</a>
                         <a href="{% url 'histories'%}">Положение об этике</a>
                         <a href="{% url 'ceo-info' %}">Охрана труда</a>
                     </div>
@@ -144,7 +144,7 @@
                     <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Досуг</a>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'contacts'%}" class="dropbtn">Контакты</a>
+                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Контакты</a>
                 </div>
                 <div class="dropmenu">
                     <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Проезд</a>

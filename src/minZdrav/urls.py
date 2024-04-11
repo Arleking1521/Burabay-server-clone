@@ -35,6 +35,7 @@ urlpatterns += i18n_patterns(
     path('about/', include('aboutPage.urls')),    
     path('reviews/', include('reviewsBlog.urls')),
     path('advertisement/', include('advertisement.urls')),
+    path('appeal/', include('appeal.urls')),
     path('login/', user_login, name = 'login'),
     path('logout/', user_logout, name = 'logout'),
     path('registration/', registration, name = 'registr'),
