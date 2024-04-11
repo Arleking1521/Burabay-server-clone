@@ -29,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'burabay-test.kz']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -57,6 +56,7 @@ INSTALLED_APPS = [
     'aboutPage',
     'reviewsBlog',
     'advertisement',
+    'appeals'
 ]
 
 MIDDLEWARE = [
