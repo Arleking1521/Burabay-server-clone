@@ -52,7 +52,7 @@ urlpatterns += i18n_patterns(
     path('quality-management-standard/', TemplateView.as_view(template_name='dopPages/managment_standart.html'), name='managment_standart'), #Стандарты менеджмента качества
     path('strategic-development/', TemplateView.as_view(template_name='dopPages/strategic_development.html'), name='srategic-dev'), #Стратегическое развитие
     path('ceo-blog/', TemplateView.as_view(template_name='dopPages/blogCEO.html'), name='blogCEO'),
-    path('achievments/', TemplateView.as_view(template_name='dopPages/achievments.html'), name='achievments'),
+    path('achievments/', TemplateView.as_view(template_name='dopPages/Achievments.html'), name='achievments'),
     path('people/', TemplateView.as_view(template_name='dopPages/NIIPeople.html'), name='people'),
     path('doctors/', TemplateView.as_view(template_name='dopPages/doctors.html'), name='doctors'),
     path('teachers/', TemplateView.as_view(template_name='dopPages/teachers.html'), name='teachers'),
