@@ -5,7 +5,7 @@ from logRegisPages.models import CustomUser
 
 class Post(models.Model):
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE, verbose_name='Автор')
-    title = models.CharField(max_length = 128, verbose_name='Заголовок')
+    title = models.CharField(max_length = 1000, verbose_name='Заголовок')
     date = models.DateTimeField(default=timezone.now, verbose_name='Дата публикации')
     content = models.TextField(verbose_name='Контент')
 
