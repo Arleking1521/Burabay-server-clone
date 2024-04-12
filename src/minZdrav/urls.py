@@ -29,7 +29,7 @@ urlpatterns += i18n_patterns(
     path('ceo-info/', include('ceoInfo.urls')), #О руководителе
     path('vacancies/', include('vacancies.urls')), #Вакансии
     path('organization-structure/', include('orgStruct.urls')), #Организационная структура
-    path('rights-acts/', include('ProvActs.urls')), #Правовые акты
+    path('rights-acts/', include('ProvActs.urls')), #Правовые акты (Надо будет убрать)
     path('workers-info/', include('workersInfo.urls')), #Информация о сотрудниках
     path('anticorruption/', include('antiCorruptions.urls')), #Противодействие коррупции
     path('about/', include('aboutPage.urls')),    #О НИИ
@@ -40,7 +40,7 @@ urlpatterns += i18n_patterns(
     path('logout/', user_logout, name = 'logout'), #Выход
     path('registration/', registration, name = 'registr'), #Регистрация
     path('password-reset/', CustomPasswordResetView.as_view(), name='password_reset'), #Забыли пароль
-    path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'), #Новый пароль
+    path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'), #страница с текстом об отправке ссылке на сброс пароля
     path('reset/<uidb64>/<token>/', CustomPasswordResetConfirmView.as_view(), name='password_reset_confirm'), #
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     path('download/<str:file_name>/', download_file, name='download_file'), #Скачивание файлов
@@ -51,7 +51,7 @@ urlpatterns += i18n_patterns(
     path('plans/', TemplateView.as_view(template_name='dopPages/plans.html'), name='plans'), #Планы
     path('quality-management-standard/', TemplateView.as_view(template_name='dopPages/managment_standart.html'), name='managment_standart'), #Стандарты менеджмента качества
     path('strategic-development/', TemplateView.as_view(template_name='dopPages/strategic_development.html'), name='srategic-dev'), #Стратегическое развитие
-    path('ceo-blog/', TemplateView.as_view(template_name='dopPages/blogCEO.html'), name='blogCEO'),
+    path('ceo-blog/', include('ceoblog.urls')),
     path('achievments/', TemplateView.as_view(template_name='dopPages/Achievments.html'), name='achievments'),
     path('people/', TemplateView.as_view(template_name='dopPages/NIIPeople.html'), name='people'),
     path('doctors/', TemplateView.as_view(template_name='dopPages/doctors.html'), name='doctors'),
