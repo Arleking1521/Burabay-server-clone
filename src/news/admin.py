@@ -7,3 +7,4 @@ from modeltranslation.admin import TranslationAdmin
 @admin.register(Post)
 class PostAdmin(TranslationAdmin):
     list_display = ( 'title', 'content', 'date',)
+    readonly_fields = ('date',)
