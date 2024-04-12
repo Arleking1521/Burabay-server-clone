@@ -4,10 +4,10 @@ from django.utils import timezone
 from logRegisPages.models import CustomUser
 
 class Post(models.Model):
-    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    title = models.CharField(max_length = 128, verbose_name='Title')
-    date = models.DateTimeField(auto_now=timezone.now)
-    content = models.TextField(verbose_name='Content')
+    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE, verbose_name='Автор')
+    title = models.CharField(max_length = 128, verbose_name='Заголовок')
+    date = models.DateTimeField(default=timezone.now, verbose_name='Дата публикации')
+    content = models.TextField(verbose_name='Контент')
 
     def __str__(self) -> str:
         return f'{self.title}: {self.content} ({self.date})'
