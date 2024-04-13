@@ -14,9 +14,9 @@ def teacher_list(request):
     posts = People.objects.filter(teacher=True)
     return render(request, 'people/teachers.html', {'teachers':posts})
 
-# def people_detail(request, pid):
-#     post = People.objects.get(id = pid)
-#     return render(request, 'people/people_detail.html', {'post':post})
+def people_detail(request, pid):
+    post = People.objects.get(id = pid)
+    return render(request, 'people/people_detail.html', {'person':post})
 
 # def people_new(request):
 #     if request.method != 'POST':

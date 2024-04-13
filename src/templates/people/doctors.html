@@ -23,7 +23,7 @@
                             <p>{{ person.post }}</p>
                             
                         </div>
-                        <a href="#">Подробнее</a>
+                        <a href="{% url 'person_detail' pid=person.pk %}">Подробнее</a>
                     </div>
                     {% endfor %}
                 </div>
