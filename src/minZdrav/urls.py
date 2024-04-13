@@ -53,7 +53,7 @@ urlpatterns += i18n_patterns(
     path('strategic-development/', TemplateView.as_view(template_name='dopPages/strategic_development.html'), name='srategic-dev'), #Стратегическое развитие
     path('ceo-blog/', include('ceoblog.urls')),
     path('achievments/', TemplateView.as_view(template_name='dopPages/Achievments.html'), name='achievments'),
-    path('people/', include('people.urls'), name='people'),
+    path('people/', include('people.urls')),
     path('uvo/', TemplateView.as_view(template_name='dopPages/UVO.html'), name='uvo'),
     path('schedule-of-childrens-shifts/', TemplateView.as_view(template_name='dopPages/kidsSchedule.html'), name='kidsSchedule'),
     path('media-galery/', TemplateView.as_view(template_name='dopPages/mediagallery.html'), name='mediagallery'),
