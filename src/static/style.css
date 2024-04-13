@@ -78,13 +78,14 @@ body{
     color: var(--bl);
     font-family: "Nunito Sans", sans-serif;
     margin: 0;
+    background-color: ghostwhite;
 }
 
 header{
     position: fixed;
     width: 100%;
     z-index: 2;
-    
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main-header{
@@ -394,6 +395,7 @@ li{
 }
 
 .form-card{
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -508,7 +510,7 @@ li{
 
 .question-block{
     padding: 20px 10%;
-    background-color: ghostwhite;
+    background-color: white;
 }
 
 .question-inner{
@@ -1245,6 +1247,60 @@ width: 30%;
 
   .reg-mob{
     display: none;
+  }
+
+  .person{
+    margin: 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid lightgray; */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+  }
+
+  .person-info{
+    margin: 15px 15px 15px 15px;
+  }
+
+  .person a{
+    width: 100%;
+    background-color: var(--logo-color);
+    border-radius: 0px 0px 8px 8px;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .person a:hover{
+    filter: brightness(1.1);
+  }
+
+  .person h4{
+    margin-bottom: 0px;
+  }
+
+  .person p{
+    margin: 0px;
+  }
+
+  .person-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    border-radius: 8px;
+    background-size: 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    margin: 0px auto;
+  }
+
+  .person-list{
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
   }
 
   @media screen and (max-width:1440px){

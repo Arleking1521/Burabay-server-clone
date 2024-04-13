@@ -11,7 +11,7 @@
         <div class="new-review">
             <h1>{% trans 'Блог Руководителя' %}</h1>
                 {% if  user.is_authenticated and user.is_staff %}
-                    <a href = "{% url 'post_new' %}" class="btn"> {% trans 'Добавить пост' %}</a>
+                    <a href = "{% url 'post_new' %}" class="btn2"> {% trans 'Добавить пост' %}</a>
                 {% endif %}
         </div>        {% for post in post_list %}
         <div class="new-frame">
