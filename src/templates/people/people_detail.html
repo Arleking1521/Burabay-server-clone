@@ -2,7 +2,7 @@
 {% load i18n%}
 {% block content %}
 <div class="content-inner">
-    <div class="new-frame">
+    {% comment %} <div class="new-frame">
         <h1 class="fame-header">{{post.title}}</h1>
         <p style="font-weight: 300; font-size: 15px;">{%trans 'Опубликовано'%}: <b>{{post.author.name}}</b></p>
         <p class="big_content">{{post.content}}</p>
@@ -27,6 +27,6 @@
             <p class="comment-body">{{comms.content}}</p> 
         </div>
         {% endfor %}
-    </div>
+    </div> {% endcomment %}
 </div> 
 {% endblock %}
