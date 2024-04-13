@@ -4,7 +4,7 @@ from .forms import PostForm
 # Create your views here.
 
 def post_list(request):
-    posts = PostCeo.objects.all()
+    posts = PostCeo.objects.order_by('-date')
     for post in posts:
         original_content = post.content
         post.content = ' '.join(original_content.split()[:40])
