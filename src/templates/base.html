@@ -24,10 +24,10 @@
                 <a href="{% url 'index' %}">{% trans 'Главная' %}</a>
                 <a href="{% url 'orgStruct' %}">{% trans 'Структура' %}</a>
                 <div class="dropmenu">
-                    <a href="{% url 'med-services'%}" class="dropbtn">Администрация<span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
+                    <a href="{% url 'ceo-info'%}" class="dropbtn">Администрация<span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
                     <div class="dropcontent">
-                        <a href="{% url 'med-services'%}"> Руководство</a>
-                        <a href="{% url 'rules'%}">Ифнормация о сотрудниках</a>
+                        <a href="{% url 'ceo-info'%}"> Руководство</a>
+                        <a href="{% url 'workers-info'%}">Ифнормация о сотрудниках</a>
                     </div>
                 </div>
                 <div class="dropmenu">
@@ -40,9 +40,9 @@
                         <a href="{% url 'viewSovet'%}">{% trans 'Наблюдательный совет' %}</a>
                     </div>
                 </div><div class="dropmenu">
-                    <a href="{% url 'viewSovet'%}" class="dropbtn">Руководитель<span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
+                    <a href="{% url 'blogCEO'%}" class="dropbtn">Руководитель<span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
                     <div class="dropcontent">
-                        <a href="{% url 'ceo-info'%}">{% trans 'Блог Руководителя' %}</a>
+                        <a href="{% url 'blogCEO'%}">{% trans 'Блог Руководителя' %}</a>
                         <a href="{% url 'appeal'%}">{% trans 'Для Обращений' %}</a>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
         <div class="sub-header">
             <div class="sub-menu">
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Пациентам</a>
+                    <a class="rubric" href="{% url 'gobmp'%}" class="dropbtn">Пациентам</a>
                     <div class="dropcontent">
                         <a href="{% url 'gobmp'%}">Механизм получения путевки по ГОМБП</a>
                         <a href="{% url 'med-services'%}">Платные услуги</a>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Наука и Достижения</a>
+                    <a class="rubric" href="{% url 'sci-dev'%}" class="dropbtn">Наука и Достижения</a>
                     <div class="dropcontent">
                         <a href="{% url 'sci-dev'%}">Научные разработки</a>
                         <a href="{% url 'plans'%}">Планы</a>
@@ -103,51 +103,51 @@
                     <a class="rubric" href="{% url 'med-services'%}" class="dropbtn">Медицинские услуги</a>
                     <div class="dropcontent">
                         <a href="{% url 'med-services'%}">Виды медицинских услуг</a>
-                        <a href="{% url 'histories'%}">Достижения</a>
+                        <a href="{% url 'achievments'%}">Достижения</a>
                     </div>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Рубрики</a>
+                    <a class="rubric" href="{% url 'people'%}" class="dropbtn">Рубрики</a>
                     <div class="dropcontent">
-                        <a href="{% url 'viewSovet'%}">Лица НИИ</a>
-                        <a href="{% url 'histories'%}">Отзывы</a>
-                        <a href="{% url 'ceo-info' %}">Наши врачи</a>
-                        <a href="{% url 'vacancies'%}">Наши педагоги</a>
+                        <a href="{% url 'people'%}">Лица НИИ</a>
+                        <a href="{% url 'reviews'%}">Отзывы</a>
+                        <a href="{% url 'doctors' %}">Наши врачи</a>
+                        <a href="{% url 'teachers'%}">Наши педагоги</a>
                     </div>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Образовательная деятельность</a>
+                    <a class="rubric" href="{% url 'uvo'%}" class="dropbtn">Образовательная деятельность</a>
                     <div class="dropcontent">
-                        <a href="{% url 'viewSovet'%}">УВО</a>
-                        <a href="{% url 'histories'%}">График детских смен</a>
+                        <a href="{% url 'uvo'%}">УВО</a>
+                        <a href="{% url 'kidsSchedule'%}">График детских смен</a>
                     </div>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Пресс-центр</a>
+                    <a class="rubric" href="{% url 'mediagallery'%}" class="dropbtn">Пресс-центр</a>
                     <div class="dropcontent">
-                        <a href="{% url 'viewSovet'%}">Медиагалерея</a>
+                        <a href="{% url 'mediagallery'%}">Медиагалерея</a>
                         <a href="{% url 'news'%}">Новости</a>
                     </div>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Стратегические партнеры</a>
+                    <a class="rubric" href="{% url 'strategic_partners'%}" class="dropbtn">Стратегические партнеры</a>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Кадровая политика</a>
+                    <a class="rubric" href="{% url 'vacancies'%}" class="dropbtn">Кадровая политика</a>
                     <div class="dropcontent">
-                        <a href="{% url 'viewSovet'%}">Вакансии</a>
-                        <a href="{% url 'histories'%}">Положение об этике</a>
-                        <a href="{% url 'ceo-info' %}">Охрана труда</a>
+                        <a href="{% url 'vacancies'%}">Вакансии</a>
+                        <a href="{% url 'ethicsRegulations'%}">Положение об этике</a>
+                        <a href="{% url 'laborProtection' %}">Охрана труда</a>
                     </div>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Досуг</a>
+                    <a class="rubric" href="{% url 'leisure'%}" class="dropbtn">Досуг</a>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Контакты</a>
+                    <a class="rubric" href="{% url 'contacts'%}" class="dropbtn">Контакты</a>
                 </div>
                 <div class="dropmenu">
-                    <a class="rubric" href="{% url 'viewSovet'%}" class="dropbtn">Проезд</a>
+                    <a class="rubric" href="{% url 'transit'%}" class="dropbtn">Проезд</a>
                 </div>
             </div>
         </div>

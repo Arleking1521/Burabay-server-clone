@@ -6,4 +6,5 @@ from modeltranslation.admin import TranslationAdmin
 
 @admin.register(Post)
 class PostAdmin(TranslationAdmin):
-    list_display = ( 'title', 'content', 'date',)
+    list_display = ( 'title', 'content', 'date')
+    fields = ('author', 'title', 'date', 'content')
